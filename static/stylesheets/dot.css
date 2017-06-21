@@ -1,0 +1,43 @@
+html, body{
+
+    font-family:"Helvetica"; font-weight: bold;
+    padding:20px;
+    font-size:24px;
+}
+.gobutton{
+    background-color: #4CAF50;
+    border: none;
+    border-radius:14px;
+    padding:5px;
+    padding-left:15px;
+    padding-right:15px;
+}
+.trybutton{
+    background-color: #256e93;
+    color:#ffffff;
+    border: none;
+    border-radius:14px;
+    padding:5px;
+    padding-left:15px;
+    padding-right:15px;
+}
+#title{
+    color:#fff;
+}
+#movieName{
+    color:#4fa32a;
+}
+#score{
+    color:#349944;
+    font-size:30px;
+    
+}
+#hint{
+    color:#65d5b4;
+}
+#year{
+    color:#349944;
+}
+#myText{
+    width:100px;
+}
