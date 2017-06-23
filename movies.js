@@ -90,7 +90,7 @@ function checkYear() {
     d3.select("#score").html("Total Score: "+score)    
     d3.select("#hint").html("show hint")
     d3.select(".gobutton").html("GO AGAIN")
-    $(".inputYear").val("")
+    $("#myText").val("")
     points = 0
     
 }
