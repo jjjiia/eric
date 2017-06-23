@@ -20,7 +20,7 @@ function display(){
     d3.select("#year").style("visibility","visible")
     d3.select("#hint").style("visibility","visible")
     d3.select("#response").style("visibility","hidden")
-    d3.select(".gobutton").style("visibility","hidden")
+    d3.select(".gobutton").html("SKIP")
     
     var totalMovies = movieData.length
     var randomMovie = Math.round(Math.random()*totalMovies)
@@ -61,7 +61,6 @@ function checkYear() {
     d3.select("#year").style("visibility","hidden")
     d3.select("#hint").style("visibility","hidden")
     d3.select("#response").style("visibility","visible")
-    d3.select(".gobutton").style("visibility","visible")
     var points
     var yearEntered = document.getElementById("myText").value
 //    console.log([year,yearEntered])
