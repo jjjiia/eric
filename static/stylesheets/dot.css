@@ -1,43 +1,61 @@
 html, body{
-
-    font-family:"Helvetica"; font-weight: bold;
-    padding:20px;
+    background-color:#54ba60;
+    font-family:"Helvetica";
+    padding:16px;
     font-size:24px;
 }
 .gobutton{
     background-color: #4CAF50;
     border: none;
     border-radius:14px;
+    border:2px solid #fff;
     padding:5px;
     padding-left:15px;
     padding-right:15px;
 }
 .trybutton{
-    background-color: #256e93;
     color:#ffffff;
-    border: none;
+    border:2px solid #fff;
+    background-color: #54ba60;
     border-radius:14px;
     padding:5px;
     padding-left:15px;
     padding-right:15px;
+    margin:10px;
+}
+#response{
+    color:#fff;   
 }
 #title{
-    color:#fff;
+    color:#fff;   
 }
 #movieName{
-    color:#4fa32a;
+    color:#fff;
+    font-size:46px;
+    font-family:"Helvetica"; font-weight: bold;
 }
 #score{
-    color:#349944;
+    width:300px;
+    color:#fff;
     font-size:30px;
-    
+    padding-top:10px;
+    margin:10px;
 }
 #hint{
-    color:#65d5b4;
+    color:#fff;
+    margin-top:20px;
 }
 #year{
-    color:#349944;
+    color:#fff;
 }
 #myText{
-    width:100px;
+    color:#aaa;
+}
+
+a {
+    color: #fff;
+    text-decoration:underline;
+}
+a:hover{
+    color:#fff;
 }

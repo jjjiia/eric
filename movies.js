@@ -11,17 +11,19 @@ var movieData = null
 function dataDidLoad(error,movies) {
     d3.select("#year").style("visibility","hidden")
     d3.select("#hint").style("visibility","hidden")
+    d3.select("#response").style("visibility","hidden")
+    
     movieData=movies
     generateHint()
 }
 function display(){
     d3.select("#year").style("visibility","visible")
     d3.select("#hint").style("visibility","visible")
+    d3.select("#response").style("visibility","hidden")
+    d3.select(".gobutton").style("visibility","hidden")
     
     var totalMovies = movieData.length
     var randomMovie = Math.round(Math.random()*totalMovies)
-    
-    
     var movie = movieData[randomMovie]
     
     currentData=movie
@@ -58,10 +60,15 @@ function generateHint(){
 function checkYear() {
     d3.select("#year").style("visibility","hidden")
     d3.select("#hint").style("visibility","hidden")
-    
+    d3.select("#response").style("visibility","visible")
+    d3.select(".gobutton").style("visibility","visible")
     var points
     var yearEntered = document.getElementById("myText").value
 //    console.log([year,yearEntered])
+    
+    var link = currentData.link
+    var linkHtml = "<a href=\"https://en.wikipedia.org"+link+"\">read about movie</a>"
+    
     if(String(year)==String(yearEntered)){
         points = 3
         d3.select("#response").html(points + " points, you got it right")
@@ -77,13 +84,14 @@ function checkYear() {
             
     }else{
         points = 0
-        d3.select("#response").html(points + " points, the correct year was "+ year)
+        d3.select("#response").html(points + " points, the correct year was "+ year+", "+linkHtml)
         
     }
     score = score+points
     d3.select("#score").html("Total Score: "+score)    
     d3.select("#hint").html("show hint")
-    d3.select(".gobutton").attr("value","GO AGAIN")
+    d3.select(".gobutton").html("GO AGAIN")
+    $(".inputYear").val("")
     points = 0
     
 }
